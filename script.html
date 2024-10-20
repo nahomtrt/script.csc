@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Message Access</title>
+    <style>
+        /* Add some creative styling for user experience */
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .warning {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="accessForm">
+        <h2>Enter Your Information</h2>
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <span id="nameWarning" class="warning">Name must be less than 20 characters!</span>
+        <input type="text" id="zipCode" placeholder="Zip Code" required>
+        <span id="zipWarning" class="warning">Zip code must be 5 digits!</span>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="secretMessage" style="display: none;">Here is your secret message: Welcome to the site!</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
